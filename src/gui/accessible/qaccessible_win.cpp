@@ -58,8 +58,13 @@
 #if !defined(WINABLEAPI)
 #  if defined(Q_WS_WINCE)
 #    include <bldver.h>
+#  else
+#    include <winable.h>
 #  endif
-#  include <winable.h>
+#endif
+
+#ifndef CHILDID_SELF
+# define     CHILDID_SELF        0
 #endif
 
 #include <oleacc.h>
